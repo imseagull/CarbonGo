@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "476957873777",
+    "project_id": "carbongo-4770e",
+    "storage_bucket": "carbongo-4770e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476957873777:android:a6353b304db3038a4fedd0",
+        "android_client_info": {
+          "package_name": "com.example.carbongo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEpFbfumxlWLdiFwP2o89gmTRqo64TxBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
