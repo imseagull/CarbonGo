@@ -73,12 +73,14 @@ public class LoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                Log.i("Denna", "createUserWithEmail:success");
+
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 authStatusTV.setText("Signed up " + user.getEmail() + " successfully");
+                                Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
+                                startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Log.i("Denna", "createUserWithEmail:failure", task.getException());
+
                                 Toast.makeText(LoginActivity.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
                                 authStatusTV.setText("Signed up - FAILED");
@@ -97,6 +99,8 @@ public class LoginActivity extends AppCompatActivity {
                             Log.i("Denna", "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             authStatusTV.setText("Signed in " + user.getEmail());
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.i("Denna", "signInWithEmail:failure", task.getException());
