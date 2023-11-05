@@ -5,12 +5,27 @@ public class Transaction {
 
     private CarbonCompany seller;
 
+    private double price;
     private double credits;
 
-    public Transaction(CarbonCompany buyer, CarbonCompany seller, double credits) {
+    private final long TIME;
+
+
+
+    public Transaction(CarbonCompany buyer, CarbonCompany seller, double price, double credits) {
         this.buyer = buyer;
         this.seller = seller;
+        this.price = price;
         this.credits = credits;
+        this.TIME = System.currentTimeMillis();
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public CarbonCompany getBuyer() {
@@ -36,4 +51,6 @@ public class Transaction {
     public void setCredits(double credits) {
         this.credits = credits;
     }
+
+    public long getTime(){return TIME;}
 }
